@@ -15,6 +15,12 @@
   }
 }
 
+.framed.framed-paragraph {
+  width: calc(100% + 40px);
+  left: -20px;
+  position: relative;
+}
+
 .posts {
   width: 100%;
 }
@@ -24,6 +30,10 @@
   text-align: left;
   margin: 20px auto;
   padding: 20px 0;
+
+  :first-child {
+      margin-top: 0 !important;
+  }
 
   &:not(:last-of-type) {
     border-bottom: 1px solid $border-color;
