@@ -1,4 +1,7 @@
 <footer class="footer">
+  <!-- Extended footer section-->
+  {{ partial "extended_footer.html" . }}
+
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
       <div class="copyright copyright--user">
@@ -18,6 +21,3 @@
 {{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
 
 <script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
-
-<!-- Extended footer section-->
-{{ partial "extended_footer.html" . }}
